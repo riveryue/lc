@@ -40,4 +40,24 @@ public class SumOfLeftLeavesNode {
         right = sumOfLeavesDFS(root.right);
         return left + right;
     }
+
+    /**
+     * 前序遍历求解左子树之和
+     */
+    int sum;
+    public int sumOfLeftLeaves(TreeNode root) {
+        dfs(root, false);
+        return sum;
+    }
+
+    void dfs(TreeNode node, boolean isLeft) {
+        if (node == null) {
+            return;
+        }
+        if (node.left == null && node.right == null && isLeft) {
+            sum += node.val;
+        }
+        dfs(node.left, true);
+        dfs(node.right, false);
+    }
 }
