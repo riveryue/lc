@@ -1,24 +1,7 @@
 package tree;
 
-import java.awt.image.renderable.RenderableImage;
 import java.util.ArrayList;
 import java.util.List;
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
 
 public class InorderTree {
 
